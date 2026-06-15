@@ -1,0 +1,1 @@
+__pycache__/\nenv/\n*.swp\n*.swo\n*.pid\n*.tmp\n*.log\n*.dmg\n*.exe\n*.pyc\n*.cache\n*.sqlite\n*.json\n*.lock\n*.egg-info/\ndata/\nconfig/\ntest_output/\n*.py[co]\n*.coverage\n*.egg-info\n*.log\n*.env\n*.venv\n*.DS_Store\n.*.orig\n*.pid\n*.swp\n*.swo\n*.bak\n*.tmp\n*.bak\n*.diff
