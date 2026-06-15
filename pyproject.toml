@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinella"
+version = "0.1.0"
+description = "Distributed AI agents for security monitoring"
+authors = ["Security Collective <security@example.com>"]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "pyjwt",
+  "pycryptodome",
+  "docker",
+  "asyncmy",
+  "pytest",
+  "uvicorn"
+]
+
+[project.urls]
+Documentation = "https://sentinella.readthedocs.io"
+Bug Tracker = "https://github.com/example/sentinella/issues"
+Source = "https://github.com/example/sentinella"
+
+[tool.setuptools.packages.find]
+exclude = [
+  "scripts",
+  "tests",
+  "docs",
+  "*.test.*",
+  "examples"
+]
