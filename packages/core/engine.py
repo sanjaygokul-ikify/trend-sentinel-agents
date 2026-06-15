@@ -34,16 +34,16 @@ class PolicyEngine:
 
 class Policy:
     def __init__(self, name: str, func: callable):
-        self.name = name
-        self.func = func
+        self.name: str = name
+        self.func: callable = func
 
     def execute(self, data: Dict[str, Any]) -> List[Anomaly]:
         return self.func(data)
 
 class Anomaly:
     def __init__(self, name: str, description: str):
-        self.name = name
-        self.description = description
+        self.name: str = name
+        self.description: str = description
 
 def example_policy(data: Dict[str, Any]) -> List[Anomaly]:
     # Example policy function
