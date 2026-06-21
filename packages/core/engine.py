@@ -11,14 +11,15 @@ class PolicyEngine:
         self.anomalies = []
 
     def execute(self, data: Dict[str, Any]) -> List[Anomaly]:
+        anomalies = []
         for policy in self.policies:
             try:
-                anomalies = policy.execute(data)
-                if anomalies:
-                    self.anomalies.extend(anomalies)
+                policy_anomalies = policy.execute(data)
+                if policy_anomalies:
+                    anomalies.extend(policy_anomalies)
             except PolicyError as e:
                 logger.error(f"Policy error: {e}")
-        return self.anomalies
+        return anomalies
 
     def get_anomalies(self) -> List[Anomaly]:
         return self.anomalies
