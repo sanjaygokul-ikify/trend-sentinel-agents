@@ -22,5 +22,5 @@ class Executor:
             logger.error(f"Execution error: {e}")
             raise ExecutionError(f"Execution error: {e}")
 
-class ExecutionError(Exception):
-    pass
+    def get_remaining_time(self, start_time: float) -> float:
+        return max(0, self.timeout - (time.time() - start_time))
