@@ -24,3 +24,6 @@ class Executor:
 
     def get_remaining_time(self) -> float:
         return max(0, self.timeout - (time.time() - self.start_time))
+
+    def is_timeout(self) -> bool:
+        return time.time() - self.start_time > self.timeout
